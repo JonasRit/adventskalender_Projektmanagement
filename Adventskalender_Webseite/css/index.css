@@ -1,0 +1,116 @@
+/* Globale Stile */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #0f2027; 
+    background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+    background: linear-gradient(to right, #2c5364, #203a43, #0f2027); 
+    color: white;
+}
+
+/* --- Pop-up Fenster Styling (Ihr Code) --- */
+
+/* Das Overlay (standardmäßig versteckt) */
+.aktivesFenster {
+    display: none; /* Wird per JS auf 'flex' geändert, wenn es aktiv wird */
+    position: fixed; /* Bleibt an einer Stelle, auch beim Scrollen */
+    z-index: 1000;   /* Liegt über allem anderen */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* Der dunkle Hintergrund */
+    background-color: rgba(0, 0, 0, 0.7); 
+    
+    /* Zentriert die weiße Box (den .fensterInhalt) */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Die weiße Inhalts-Box */
+.fensterInhalt {
+    background-color: #fff;
+    color: #333; /* Dunkle Schrift für weißen Hintergrund */
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px; /* Maximale Breite der Box */
+    position: relative; /* Wichtig für den Schließen-Knopf */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Der Schließen-Knopf (das 'x') */
+.schliessen {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.schliessen:hover,
+.schliessen:focus {
+    color: #000;
+}
+
+/* --- Kalender-Styling (Ihr Code) --- */
+
+.adventskalender{
+    display: flex;
+    /* Füllt Zeilen von rechts nach links */
+    flex-direction: row-reverse;
+    /* Stapelt Zeilen von unten nach oben */
+    flex-wrap: wrap-reverse;
+    
+    /* Zentriert den Kalender auf der Seite */
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 10px;
+    /* Sorgt für gleichmäßige Verteilung bei Bedarf */
+    justify-content: center;
+}
+
+/* Styling für die Türchen (Kombination) */
+.tuerchen{
+    /* Ihre Maße */
+    width: 90px;
+    height: 110px;
+
+    /* NEU: Sorgt dafür, dass padding und border in der Breite/Höhe enthalten sind */
+    box-sizing: border-box; 
+    
+    /* NEU: Beispiel-Innenabstand */
+    padding: 10px; 
+    
+    /* Wichtige Stile für Aussehen & Funktion */
+    background-color: #a02c2c; /* Weihnachtsrot */
+    border: 2px solid #fff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 5px; /* Ersetzt 'gap' für Flexbox */
+}
+
+/* Hover-Effekt für Türchen */
+.tuerchen:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Markiert ein bereits geöffnetes Türchen */
+.tuerchen.offen {
+    background-color: #5a1a1a; /* Dunkleres Rot */
+    color: #c0c0c0;
+    transform: scale(0.95);
+}
