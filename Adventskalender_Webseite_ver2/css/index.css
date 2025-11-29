@@ -1,0 +1,47 @@
+.aktivesFenster {
+    display: none; 
+    position: fixed; 
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.fensterInhalt {
+    background-color: white;
+    padding: 20px;
+    position: relative;
+    border: 1px solid #000;
+}
+
+.schliessen {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+.adventskalender{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.tuerchen{
+    width: 90px;
+    height: 150px;  
+    border: 1px solid #000;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.tuerchen.offen {
+   
+    background-color: red; 
+}
