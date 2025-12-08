@@ -32,6 +32,7 @@ body {
 
 .inhalt{
     margin: 30px 0px;
+    padding: 0px 30px;
 }
 
 .hintergrundAktivesFenster {
@@ -65,7 +66,7 @@ body {
     flex-direction: row-reverse;
     flex-wrap: wrap-reverse;
 
-    justify-content: center; /*Alle Türen zentrieren*/
+    justify-content: space-between; /*Alle Türen zentrieren*/
     gap: 18px;               /*Abstände zwischen den Türen*/
     
     max-width: 900px;
@@ -104,13 +105,24 @@ body {
     border-radius: 10px;
     font-family: 'Pacifico', cursive;
 }
+
+.tuerchen.closed{
+    background-color: red;
+}
+.tuerchen.opened{
+    background-color: white;
+}
+
 .tuerchen.closed .tuer-inner {
     transform: rotateY(0deg);  
 }
 
 .tuerchen.opened .tuer-inner {
     transform: rotateY(-50deg); /*Tür öffnen*/
+
 }
+
+
 
 
                                 /*Reihenfolge der Türen*/
