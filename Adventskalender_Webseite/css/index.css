@@ -1,17 +1,55 @@
-.aktivesFenster {
+html{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-image: url("../img/background/Weinachtskrimi.png");
+    background-size: auto auto; 
+    
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.titel {
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    background-color: #0b1b63;
+}
+
+.titel h2 {
+    width: 100vw;
+    margin: 0;
+    color: white;
+    /*-webkit-text-stroke: 0.4px yellow;*/
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 28px;
+}
+
+.inhalt{
+    margin: 30px 0px;
+    padding: 0px 30px;
+}
+
+.hintergrundAktivesFenster {
     display: none; 
     position: fixed; 
     z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     justify-content: center;
     align-items: center;
 }
 
 .fensterInhalt {
     background-color: white;
+    width: 70vw;
     padding: 20px;
     position: relative;
     border: 1px solid #000;
@@ -27,21 +65,86 @@
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap-reverse;
+
+    justify-content: space-between; /*Alle Türen zentrieren*/
+    gap: 18px;               /*Abstände zwischen den Türen*/
     
     max-width: 900px;
-    margin: 20px auto;
+    margin: 0 auto;
 }
 
 .tuerchen{
     width: 90px;
     height: 150px;  
-    border: 1px solid #000;
-    
+    font-size: 2em;
+    border-radius: 10px;
+    font-weight: bold;
+    perspective: 600px;
     justify-content: center;
     align-items: center;
 }
 
-.tuerchen.offen {
-   
-    background-color: red; 
+.tuer-inner {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 0, 0);
+    transform-origin: left center;
+    transform: rotateY(0deg);           /*Tür geschlossen*/
+    transition: transform 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: yellow;
+    font-weight: bold;
+    border-radius: 10px;
+    font-family: 'Pacifico', cursive;
 }
+
+.tuerchen.closed{
+    background-color: red;
+}
+.tuerchen.opened{
+    background-color: white;
+}
+
+.tuerchen.closed .tuer-inner {
+    transform: rotateY(0deg);  
+}
+
+.tuerchen.opened .tuer-inner {
+    transform: rotateY(-50deg); /*Tür öffnen*/
+
+}
+
+
+
+
+                                /*Reihenfolge der Türen*/
+#tuer_1 { order: 17; }
+#tuer_2 { order: 5; }
+#tuer_3 { order: 22; }
+#tuer_4 { order: 8; }
+#tuer_5 { order: 14; }
+#tuer_6 { order: 2; }
+#tuer_7 { order: 20; }
+#tuer_8 { order: 12; }
+#tuer_9 { order: 24; }
+#tuer_10 { order: 1; }
+#tuer_11 { order: 18; }
+#tuer_12 { order: 6; }
+#tuer_13 { order: 11; }
+#tuer_14 { order: 4; }
+#tuer_15 { order: 21; }
+#tuer_16 { order: 3; }
+#tuer_17 { order: 15; }
+#tuer_18 { order: 9; }
+#tuer_19 { order: 19; }
+#tuer_20 { order: 7; }
+#tuer_21 { order: 23; }
+#tuer_22 { order: 16; }
+#tuer_23 { order: 13; }
+#tuer_24 { order: 10; }
+
+
+
+
