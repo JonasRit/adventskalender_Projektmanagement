@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let aktuellerMonat;
     let aktuellerTag;
 
+
+    //hier kommen die Inhalte der Türchen hin
     const inhalte = {
         2025: {
             1: { titel: "1. Dezember", text: `In der Weihnachtsnacht 2008 meldet jemand von einem Nachbarshaus
@@ -62,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+    //hier werden Variablen definiert
     const kalender = document.querySelector('.adventskalender');
     const fenster = document.getElementById('id_hintergrundAktivesFenster');
     const schliessenKnopf = document.getElementById('schliessenKnopf');
@@ -69,10 +72,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const fensterText = document.getElementById('fensterText');
 
 
+    //hier wird definiert was passiert wenn irgendein Türchen
     kalender.addEventListener('click', function(e) {
         const tuerchen = e.target.closest('.tuerchen');
-        if (!tuerchen) return;
+        if (!tuerchen){
+            return;
+        } 
 
+        //hier wird das datum abgefragt
         heute = new Date();
         aktuellesJahr = heute.getFullYear();
         aktuellerMonat = heute.getMonth();
@@ -87,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-
+    //wichtig! 0 ist Januar 11 ist Dezember!!
     function darfTuerOeffnen(tuerNummer) {
         if (aktuellerMonat !== 11) {
             alert("Geduld! Der Adventskalender startet erst im Dezember.");
