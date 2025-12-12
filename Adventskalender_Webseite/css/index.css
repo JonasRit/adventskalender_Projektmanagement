@@ -92,24 +92,24 @@ body {
 .tuer-inner {
     width: 100%;
     height: 100%;
-    background-color: rgb(255, 0, 0);
+    background-color: #8B181D;
     transform-origin: left center;
-    transform: rotateY(0deg);           /*Tür geschlossen*/
+    transform: rotateY(0deg);  
     transition: transform 0.5s;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: yellow;
+    color: #E6BE9A;
     font-weight: bold;
     border-radius: 10px;
     font-family: 'Pacifico', cursive;
 }
 
 .tuerchen.closed{
-    background-color: red;
+    background-color: #8B181D;
 }
 .tuerchen.opened{
-    background-color: white;
+    background-color: #d7d7d7;
 }
 
 .tuerchen.closed .tuer-inner {
