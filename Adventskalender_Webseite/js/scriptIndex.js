@@ -1,13 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // --- 1. GLOBALE VARIABLEN (innerhalb dieses Skripts) ---
-    // Wir definieren sie hier mit 'let', damit alle Funktionen sie sehen.
-    // Werte bekommen sie aber erst beim Klick (damit die Zeit immer aktuell ist).
     let heute;
     let aktuellesJahr;
     let aktuellerMonat;
     let aktuellerTag;
 
+
+    //hier kommen die Inhalte der Türchen hin
     const inhalte = {
         2025: {
             1: { titel: "1. Dezember", text: `In der Weihnachtsnacht 2008 meldet jemand von einem Nachbarshaus
@@ -65,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+    //hier werden Variablen definiert
     const kalender = document.querySelector('.adventskalender');
     const fenster = document.getElementById('id_hintergrundAktivesFenster');
     const schliessenKnopf = document.getElementById('schliessenKnopf');
@@ -72,39 +72,35 @@ document.addEventListener('DOMContentLoaded', function() {
     const fensterText = document.getElementById('fensterText');
 
 
-    // --- 2. DER HAUPT-KLICK ---
+    //hier wird definiert was passiert wenn irgendein Türchen
     kalender.addEventListener('click', function(e) {
         const tuerchen = e.target.closest('.tuerchen');
-        if (!tuerchen) return;
+        if (!tuerchen){
+            return;
+        } 
 
-        // HIER setzen wir die "globalen" Werte einmalig für diesen Klick
+        //hier wird das datum abgefragt
         heute = new Date();
         aktuellesJahr = heute.getFullYear();
         aktuellerMonat = heute.getMonth();
         aktuellerTag = heute.getDate();
 
-        // Optional: Zum Testen hier das Datum manipulieren:
-        // aktuellesJahr = 2025; aktuellerMonat = 11; aktuellerTag = 24;
 
         const tuerNummer = parseInt(tuerchen.id.split('_')[1]);
 
-        // Schau mal: Wir müssen kein Datum mehr übergeben!
         if (darfTuerOeffnen(tuerNummer) === true) {
             tuerWirdGeoeffnet(tuerNummer);
         }
     });
 
 
-    // --- 3. DIE FUNKTIONEN (Jetzt viel schlanker) ---
-
+    //wichtig! 0 ist Januar 11 ist Dezember!!
     function darfTuerOeffnen(tuerNummer) {
-        // Greift direkt auf die Variable 'aktuellerMonat' von oben zu
         if (aktuellerMonat !== 11) {
             alert("Geduld! Der Adventskalender startet erst im Dezember.");
             return false;
         }
 
-        // Greift direkt auf 'aktuellerTag' zu
         if (tuerNummer > aktuellerTag) {
             alert(`Heute ist erst der ${aktuellerTag}. Dezember. Du kannst Türchen ${tuerNummer} noch nicht öffnen!`);
             return false;
@@ -114,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function tuerWirdGeoeffnet(tuerNummer) {
-       // Greift sich das Jahr selbst
+    
        const inhalt = holeInhalt(tuerNummer);
 
        fensterTitel.textContent = inhalt.titel;
@@ -123,7 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
        
        fenster.style.display = 'flex';
 
-       // Styling ändern
        const tuerchenElement = document.getElementById(`tuer_${tuerNummer}`);
        if (tuerchenElement) {
            tuerchenElement.classList.remove('closed');
@@ -137,7 +132,6 @@ document.addEventListener('DOMContentLoaded', function() {
             text: "Noch ein Tag näher an Weihnachten!"
         };
 
-        // Greift direkt auf 'aktuellesJahr' zu
         if (inhalte[aktuellesJahr] && inhalte[aktuellesJahr][tag]) {
             return inhalte[aktuellesJahr][tag];
         }
@@ -146,7 +140,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    // --- 4. FENSTER SCHLIEßEN LOGIK ---
     function schliesseFenster() {
         fenster.style.display = 'none';
     }
