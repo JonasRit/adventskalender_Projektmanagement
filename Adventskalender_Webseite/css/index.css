@@ -6,7 +6,6 @@ html{
 body {
     margin: 0;
     background-image: url("../img/background/Weinachtskrimi.png");    
-    background-attachment: fixed;
     background-position: center center;
     background-size: cover;  
     background-repeat: no-repeat;
