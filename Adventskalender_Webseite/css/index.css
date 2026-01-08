@@ -48,12 +48,20 @@ body {
 }
 
 .fensterInhalt {
-    background-color: white;
+    background-color: #8B181D;
     width: 70vw;
     padding: 20px;
     position: relative;
     border: 1px solid #000;
     font-size: 20px;
+    border-radius: 15px;
+    font-style: italic;
+    color: #FAF7F2;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.8;
+    overflow-y: auto;
+     max-height: 80vh;
 }
 
 .fensterInhalt li{
