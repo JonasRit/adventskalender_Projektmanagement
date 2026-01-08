@@ -5,12 +5,12 @@ html{
 
 body {
     margin: 0;
-    background-image: url("../img/background/Weinachtskrimi.png");
-    background-size: auto 800px; 
-    
-    background-position: center left;
+    background-image: url("../img/background/Weinachtskrimi.png");    
+    background-size: cover;  
+    background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    min-height: 100vh;
 }
 
 .titel {
