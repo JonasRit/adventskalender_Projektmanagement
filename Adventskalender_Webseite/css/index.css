@@ -94,13 +94,13 @@ body {
     cursor: pointer;
 }
 .adventskalender{
-    padding: 0 20px;
+    padding: 0 30px;
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap-reverse;
 
-    justify-content: space-around; /*Alle Türen zentrieren*/
-    gap: 14px;               /*Abstände zwischen den Türen*/
+    justify-content: space-between; /*Alle Türen zentrieren*/
+    gap: 23px;               /*Abstände zwischen den Türen*/
     
     max-width: 900px;
     margin: 0 auto;
