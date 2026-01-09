@@ -345,6 +345,7 @@ https://www.welt.de/vermischtes/article2940187/Amoklauf-Weihnachtsmann-macht-16-
     const fensterTitel = document.getElementById('fensterTitel');
     const fensterText = document.getElementById('fensterText');
 
+    //hier ist ein test
 
     //hier wird definiert was passiert wenn irgendein Türchen
     kalender.addEventListener('click', function(e) {
