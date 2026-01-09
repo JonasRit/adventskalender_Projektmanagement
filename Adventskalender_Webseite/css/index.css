@@ -13,16 +13,17 @@ body {
 }
 
 .background {
-    position: fixed; /* WICHTIG: Das Bild bewegt sich gar nicht (löst das iPhone-Problem) */
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;    /* WICHTIG: Volle Breite des Bildschirms */
-    height: 100%;   /* WICHTIG: Volle Höhe des Bildschirms */
-    z-index: -1;     /* WICHTIG: Schiebt das Bild hinter den Text */
+    width: 100%;    
+    height: 100%;  
+    z-index: -1;    
     
     background-image: url('../img/background/Weinachtskrimi.webp');
     
     background-position: center;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
