@@ -8,7 +8,7 @@ body {
     padding: 0px;
     width: 100vw;
     height: min-content;
-   
+    overflow-x: hidden;
     
 }
 
