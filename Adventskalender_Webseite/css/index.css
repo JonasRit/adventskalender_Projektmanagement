@@ -6,7 +6,7 @@ html{
 body {
     margin: 0px;
     padding: 0px;
-    width: 100vw;
+    width: 100%;
     height: min-content;
     overflow-x: hidden;
     
@@ -16,8 +16,8 @@ body {
     position: fixed; /* WICHTIG: Das Bild bewegt sich gar nicht (löst das iPhone-Problem) */
     top: 0;
     left: 0;
-    width: 100vw;    /* WICHTIG: Volle Breite des Bildschirms */
-    height: 100vh;   /* WICHTIG: Volle Höhe des Bildschirms */
+    width: 100%;    /* WICHTIG: Volle Breite des Bildschirms */
+    height: 100%;   /* WICHTIG: Volle Höhe des Bildschirms */
     z-index: -1;     /* WICHTIG: Schiebt das Bild hinter den Text */
     
     background-image: url('../img/background/Weinachtskrimi.webp');
@@ -45,9 +45,10 @@ body {
 
 .inhalt{
     margin: 30px 0px;
-    padding: 0px 30px;
+    
     overflow: hidden;
     height: 100%;
+    width: 100%;
 }
 
 .hintergrundAktivesFenster {
@@ -97,8 +98,8 @@ body {
     flex-direction: row-reverse;
     flex-wrap: wrap-reverse;
 
-    justify-content: space-between; /*Alle Türen zentrieren*/
-    gap: 18px;               /*Abstände zwischen den Türen*/
+    justify-content: space-around; /*Alle Türen zentrieren*/
+    gap: 14px;               /*Abstände zwischen den Türen*/
     
     max-width: 900px;
     margin: 0 auto;
