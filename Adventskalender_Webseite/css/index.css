@@ -7,8 +7,8 @@ body {
     margin: 0px;
     padding: 0px;
     width: 100%;
-    height: min-content;
-    overflow-x: hidden;
+    height: 100%;
+   
     
 }
 
@@ -21,7 +21,7 @@ body {
     z-index: -1;     /* WICHTIG: Schiebt das Bild hinter den Text */
     
     background-image: url('../img/background/Weinachtskrimi.webp');
-    background-size: cover; /* WICHTIG: Zoomt rein, damit KEINE weißen Lücken entstehen */
+    
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -34,7 +34,7 @@ body {
 }
 
 .titel h2 {
-    width: 100vw;
+ 
     margin: 0;
     color: white;
     /*-webkit-text-stroke: 0.4px yellow;*/
@@ -45,10 +45,9 @@ body {
 
 .inhalt{
     margin: 30px 0px;
-    
+    padding: 0px 30px;
     overflow: hidden;
     height: 100%;
-    width: 100%;
 }
 
 .hintergrundAktivesFenster {
@@ -94,13 +93,12 @@ body {
     cursor: pointer;
 }
 .adventskalender{
-    padding: 0 30px;
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap-reverse;
 
     justify-content: space-between; /*Alle Türen zentrieren*/
-    gap: 23px;               /*Abstände zwischen den Türen*/
+    gap: 18px;               /*Abstände zwischen den Türen*/
     
     max-width: 900px;
     margin: 0 auto;
