@@ -1,7 +1,6 @@
 html{
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    overscroll-behavior-y: none;
 }
 
 body {
@@ -46,6 +45,7 @@ body {
 .inhalt{
     margin: 30px 0px;
     padding: 0px 30px;
+    overflow: hidden;
 }
 
 .hintergrundAktivesFenster {
