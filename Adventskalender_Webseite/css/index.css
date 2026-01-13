@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html{
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
@@ -11,9 +15,7 @@ body {
     overscroll-behavior: none;
 }
 
-html, body {
-    overscroll-behavior: none;
-}
+
 
 .banner {
     width: 100%;
@@ -35,7 +37,7 @@ html, body {
     z-index: -1;    
     
     background-image: url('../img/background/Weinachtskrimi.webp');
-    background-size: auto 100%;
+    background-size: cover;
     background-position: center;
 
     background-repeat: no-repeat;
@@ -60,8 +62,7 @@ html, body {
 
 .inhalt{
     margin: 30px 0px;
-    padding: 0px 30px;
-    overflow: hidden;
+    padding: 0 5vw;
     height: 100%;
 }
 
@@ -94,7 +95,7 @@ html, body {
     overflow-wrap: break-word;
     line-height: 1.8;
     overflow-y: auto;
-     max-height: 80vh;
+    max-height: 80vh;
 }
 
 .fensterInhalt li{
@@ -108,27 +109,23 @@ html, body {
     cursor: pointer;
     font-size: 32px;
 }
-.adventskalender{
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap-reverse;
-
-    justify-content: space-between; /*Alle Türen zentrieren*/
-    gap: 18px;               /*Abstände zwischen den Türen*/
-    
-    max-width: 900px;
+.adventskalender {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4vw;
+    max-width: 90vw;
     margin: 0 auto;
 }
 
-.tuerchen{
-    width: 90px;
-    height: 150px;  
+.tuerchen{    
+    width: 100%;
     font-size: 2em;
     border-radius: 10px;
     font-weight: bold;
     perspective: 600px;
     justify-content: center;
     align-items: center;
+    aspect-ratio: 3 / 5;
 }
 
 .tuer-inner {
@@ -145,7 +142,7 @@ html, body {
     font-weight: bold;
     border-radius: 10px;
     font-family: 'Pacifico', cursive;
-    font-size: 1.2 em;
+    font-size: clamp(26px, 9vw, 36px);
 }
 
 .tuerchen.closed{
@@ -168,10 +165,11 @@ html, body {
     display: block;
     margin-left: auto;
 
+    margin: 40px auto 0 auto;
+    font-size: clamp(16px, 4vw, 20px);
 
     margin-top: 50px;
     margin-right: 0;
-    font-size: 20px;
     width: fit-content;
     padding: 10px;
 
