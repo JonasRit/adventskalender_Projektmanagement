@@ -389,23 +389,25 @@ https://www.welt.de/vermischtes/article2940187/Amoklauf-Weihnachtsmann-macht-16-
     }
 
     function tuerWirdGeoeffnet(tuerNummer) {
-    
-       const inhalt = holeInhalt(tuerNummer);
 
-       fensterTitel.textContent = inhalt.titel;
-       
-       fensterText.innerHTML = inhalt.text;
-       
-       fenster.style.display = 'flex';
+        const inhalt = holeInhalt(tuerNummer);
 
-       const tuerchenElement = document.getElementById(`tuer_${tuerNummer}`);
-       if (tuerchenElement) {
-           tuerchenElement.classList.remove('closed');
-           tuerchenElement.classList.add('opened');
+        const tuerchenElement = document.getElementById(`tuer_${tuerNummer}`);
+        if (tuerchenElement) {
+            tuerchenElement.classList.remove('closed');
+            tuerchenElement.classList.add('opened');
             speichereStatus(tuerNummer);
+        }
 
-       }
-   }
+        // Fenster INHALT setzen
+        fensterTitel.textContent = inhalt.titel;
+        fensterText.innerHTML = inhalt.text;
+
+        // Fenster erst nach 5ms anzeigen
+        setTimeout(() => {
+            fenster.style.display = 'flex';
+        }, 500);
+    }
 
     function holeInhalt(tag) {
         const standard = {
