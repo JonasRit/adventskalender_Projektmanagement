@@ -116,7 +116,6 @@ body {
     gap: 4vw;
     max-width: 90vw;
     margin: 0 auto;
-    overflow: visible;
 }
 
 .tuerchen{    
@@ -128,6 +127,7 @@ body {
     justify-content: center;
     align-items: center;
     aspect-ratio: 3 / 5;
+    overflow: visible;
 }
 
 .tuer-inner {
