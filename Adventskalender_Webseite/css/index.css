@@ -113,7 +113,7 @@ body {
 .adventskalender {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 4vw;
+    gap: 6vw;
     max-width: 90vw;
     margin: 0 auto;
 }
