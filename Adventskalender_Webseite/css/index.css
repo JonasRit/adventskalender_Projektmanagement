@@ -109,12 +109,14 @@ body {
     cursor: pointer;
     font-size: 32px;
 }
+
 .adventskalender {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 4vw;
     max-width: 90vw;
     margin: 0 auto;
+    overflow: visible;
 }
 
 .tuerchen{    
@@ -142,7 +144,7 @@ body {
     font-weight: bold;
     border-radius: 10px;
     font-family: 'Pacifico', cursive;
-    font-size: clamp(26px, 9vw, 36px);
+    font-size: clamp(28px, 10vw, 40px);
 }
 
 .tuerchen.closed{
