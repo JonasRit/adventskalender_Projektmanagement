@@ -354,16 +354,17 @@ https://www.welt.de/vermischtes/article2940187/Amoklauf-Weihnachtsmann-macht-16-
 
         //hier wird das datum abgefragt
         heute = new Date();
-        /*
+        
         aktuellesJahr = heute.getFullYear();
         aktuellerMonat = heute.getMonth();
         aktuellerTag = heute.getDate();
-        */
+        
 
+        /*
         aktuellesJahr = 2025;
         aktuellerMonat = 11;
         aktuellerTag = 24;
-
+        */
 
         const tuerNummer = parseInt(tuerchen.id.split('_')[1]);
 
