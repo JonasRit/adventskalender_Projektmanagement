@@ -138,10 +138,18 @@ body {
     justify-content: center;
     align-items: center;
     color: #E6BE9A;
-    font-weight: bold;
     border-radius: 10px;
     /*font-family: 'Pacifico', cursive;*/
-    font-size: clamp(28px, 10vw, 40px);
+
+
+    font-size: 55px;
+
+
+
+    font-family: "Bonheur Royale", cursive;
+  font-weight: 600;
+  font-style: normal;
+
 }
 
 .tuerchen.closed{
@@ -202,6 +210,8 @@ body {
 #tuer_22 { order: 16; }
 #tuer_23 { order: 13; }
 #tuer_24 { order: 10; }
+
+
 
 
 
