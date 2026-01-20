@@ -83,7 +83,7 @@ body {
 
 .fensterInhalt {
     background-color: #8B181D;
-    width: 70vw;
+    width: 87vw;
     padding: 20px;
     position: relative;
     border: 1px solid #000;
@@ -105,7 +105,7 @@ body {
 .schliessen {
     position: absolute;
     top: 5px;
-    right: 10px;
+    right: 40px;
     cursor: pointer;
     font-size: 32px;
 }
