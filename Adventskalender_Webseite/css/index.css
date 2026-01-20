@@ -139,16 +139,13 @@ body {
     align-items: center;
     color: #E6BE9A;
     border-radius: 10px;
-    /*font-family: 'Pacifico', cursive;*/
+    
 
+    font-family: 'tuerchenScriftart', sans-serif;
+    font-weight: 600;
 
-    font-size: 55px;
+    font-size: 63px;
 
-
-
-    font-family: "Bonheur Royale", cursive;
-  font-weight: 600;
-  font-style: normal;
 
 }
 
@@ -212,6 +209,12 @@ body {
 #tuer_24 { order: 10; }
 
 
+@font-face {
+    font-family: 'tuerchenScriftart';
+    src: url('../fonts/BonheurRoyale-Regular.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
 
 
 
