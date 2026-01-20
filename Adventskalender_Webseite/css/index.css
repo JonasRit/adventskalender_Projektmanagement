@@ -95,12 +95,9 @@ body {
     overflow-wrap: break-word;
     line-height: 1.8;
     overflow-y: auto;
-    max-height: 80vh;
+    max-height: 88vh;
 }
 
-.fensterInhalt li{
-    /*font-size: 18px;*/
-}
 
 .schliessen {
     position: absolute;
